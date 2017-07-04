@@ -30,7 +30,8 @@
       recognition.onresult = function(e) {
         document.getElementById('transcript').value
                                  = e.results[0][0].transcript;
-        console.log("dummy variable = " e.results[0][0]);
+        console.log("dummy variable");
+        console.log(e.results[0][0]);
         recognition.stop();
         document.getElementById('labnol').submit();
       };
