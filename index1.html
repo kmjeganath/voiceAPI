@@ -30,7 +30,7 @@
       recognition.onresult = function(e) {
         var string = e.results[0][0].transcript;
         string.split();
-        document.getElementById('transcript').value=string.replace(/what is/gi,'').replace(/what is the/gi,'');
+        document.getElementById('transcript').value=string.replace(/what is|the|+/gi,'');
         console.log("dummy variable");
 
         //var dummyVar1 = e.results[0][0].transcript.split();
