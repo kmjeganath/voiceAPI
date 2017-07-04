@@ -29,11 +29,11 @@
 
       recognition.onresult = function(e) {
         document.getElementById('transcript').value
-                                 = e.results[0][0].transcript;
+                                 = e.results[0][0].transcript.split().replace(/how/gi,'');
         console.log("dummy variable");
 
-        var dummyVar1 = e.results[0][0].transcript.split();
-  	    var dummyVar2 = e.results[0][0].transcript.replace(/how/gi,'');
+        //var dummyVar1 = e.results[0][0].transcript.split();
+  	   // var dummyVar2 = e.results[0][0].transcript.replace(/how/gi,'');
         recognition.stop();
         document.getElementById('labnol').submit();
       };
