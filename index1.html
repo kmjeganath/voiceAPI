@@ -30,11 +30,8 @@
       recognition.onresult = function(e) {
         var string = e.results[0][0].transcript;
         var finalString = string.replace(/what is|what's|the/gi,'');
-        document.getElementById('transcript').value = finalString.replace(" ","");
+        document.getElementById('transcript').value = finalString;
         console.log("dummy variable");
-
-        //var dummyVar1 = e.results[0][0].transcript.split();
-  	   // var dummyVar2 = e.results[0][0].transcript.replace(/how/gi,'');
         recognition.stop();
         document.getElementById('labnol').submit();
       };
